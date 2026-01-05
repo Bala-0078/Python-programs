@@ -1,0 +1,529 @@
+{
+    "Assam": {
+        "timestamp": 1767612040.4833715,
+        "name": "Assam",
+        "data": {
+            "latitude": 6.0,
+            "longitude": 9.25,
+            "generationtime_ms": 0.048279762268066406,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 140.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 32.1,
+                "windspeed": 7.2,
+                "winddirection": 307,
+                "is_day": 1,
+                "weathercode": 2
+            }
+        }
+    },
+    "Bihar": {
+        "timestamp": 1767612043.203404,
+        "name": "Bih\u0101r",
+        "data": {
+            "latitude": 24.375,
+            "longitude": 89.0,
+            "generationtime_ms": 0.052928924560546875,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 16.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 15.9,
+                "windspeed": 4.3,
+                "winddirection": 312,
+                "is_day": 1,
+                "weathercode": 1
+            }
+        }
+    },
+    "Goa": {
+        "timestamp": 1767612046.6234412,
+        "name": "Genoa",
+        "data": {
+            "latitude": 44.4,
+            "longitude": 8.940001,
+            "generationtime_ms": 0.064849853515625,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 18.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 5.2,
+                "windspeed": 25.4,
+                "winddirection": 7,
+                "is_day": 1,
+                "weathercode": 3
+            }
+        }
+    },
+    "Gujarat": {
+        "timestamp": 1767612048.4592998,
+        "name": "Gujarat",
+        "data": {
+            "latitude": 27.0,
+            "longitude": 86.25,
+            "generationtime_ms": 0.05602836608886719,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 710.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 12.4,
+                "windspeed": 6.7,
+                "winddirection": 254,
+                "is_day": 1,
+                "weathercode": 2
+            }
+        }
+    },
+    "Haryana": {
+        "timestamp": 1767612050.2649636,
+        "name": "Hary\u0101na",
+        "data": {
+            "latitude": 34.125,
+            "longitude": 71.875,
+            "generationtime_ms": 0.06556510925292969,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 304.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 15.3,
+                "windspeed": 3.1,
+                "winddirection": 159,
+                "is_day": 1,
+                "weathercode": 0
+            }
+        }
+    },
+    "Jharkhand": {
+        "timestamp": 1767612055.0063076,
+        "name": "Jh\u0101rkhand",
+        "data": {
+            "latitude": 24.75,
+            "longitude": 76.625,
+            "generationtime_ms": 0.06723403930664062,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 280.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 18.0,
+                "windspeed": 5.9,
+                "winddirection": 43,
+                "is_day": 1,
+                "weathercode": 0
+            }
+        }
+    },
+    "Kerala": {
+        "timestamp": 1767612058.3471055,
+        "name": "Ker\u00e4l\u00e4",
+        "data": {
+            "latitude": 65.3631,
+            "longitude": 26.89122,
+            "generationtime_ms": 0.4887580871582031,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 120.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": -21.4,
+                "windspeed": 2.9,
+                "winddirection": 51,
+                "is_day": 1,
+                "weathercode": 3
+            }
+        }
+    },
+    "Manipur": {
+        "timestamp": 1767612063.3247519,
+        "name": "Manipur",
+        "data": {
+            "latitude": 30.5,
+            "longitude": 71.625,
+            "generationtime_ms": 0.062465667724609375,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 131.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 17.0,
+                "windspeed": 4.4,
+                "winddirection": 35,
+                "is_day": 1,
+                "weathercode": 1
+            }
+        }
+    },
+    "Odisha": {
+        "timestamp": 1767612070.465752,
+        "name": "\u00d6dishausen",
+        "data": {
+            "latitude": 51.940002,
+            "longitude": 10.18,
+            "generationtime_ms": 0.07390975952148438,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 191.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": -2.2,
+                "windspeed": 18.8,
+                "winddirection": 192,
+                "is_day": 1,
+                "weathercode": 3
+            }
+        }
+    },
+    "Punjab": {
+        "timestamp": 1767612072.7635484,
+        "name": "Punj\u0101bpura",
+        "data": {
+            "latitude": 27.5,
+            "longitude": 78.625,
+            "generationtime_ms": 0.052809715270996094,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 171.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 15.2,
+                "windspeed": 5.0,
+                "winddirection": 291,
+                "is_day": 1,
+                "weathercode": 2
+            }
+        }
+    },
+    "Tripura": {
+        "timestamp": 1767612083.850516,
+        "name": "Tripura",
+        "data": {
+            "latitude": 22.375,
+            "longitude": 92.125,
+            "generationtime_ms": 0.056624412536621094,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 20.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 18.9,
+                "windspeed": 6.1,
+                "winddirection": 332,
+                "is_day": 1,
+                "weathercode": 2
+            }
+        }
+    },
+    "Chandigarh": {
+        "timestamp": 1767612092.7378433,
+        "name": "Chandigarh",
+        "data": {
+            "latitude": 30.75,
+            "longitude": 76.75,
+            "generationtime_ms": 0.048041343688964844,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 350.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 14.8,
+                "windspeed": 7.5,
+                "winddirection": 305,
+                "is_day": 1,
+                "weathercode": 3
+            }
+        }
+    },
+    "Dadra And Nagar Haveli": {
+        "timestamp": 1767612095.4356728,
+        "name": "Dadra and Nagar Haveli",
+        "data": {
+            "latitude": 32.5,
+            "longitude": 74.625,
+            "generationtime_ms": 0.06818771362304688,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 263.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 15.4,
+                "windspeed": 7.1,
+                "winddirection": 285,
+                "is_day": 1,
+                "weathercode": 2
+            }
+        }
+    },
+    "Delhi": {
+        "timestamp": 1767612099.1806166,
+        "name": "Delhi",
+        "data": {
+            "latitude": 28.625,
+            "longitude": 77.25,
+            "generationtime_ms": 0.04756450653076172,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 231.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 15.9,
+                "windspeed": 6.6,
+                "winddirection": 292,
+                "is_day": 1,
+                "weathercode": 2
+            }
+        }
+    },
+    "Ladakh": {
+        "timestamp": 1767612102.9081402,
+        "name": "Lad\u0101khaman",
+        "data": {
+            "latitude": 19.5,
+            "longitude": 83.125,
+            "generationtime_ms": 0.09059906005859375,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 815.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 22.6,
+                "windspeed": 12.2,
+                "winddirection": 336,
+                "is_day": 1,
+                "weathercode": 0
+            }
+        }
+    },
+    "Lakshadweep": {
+        "timestamp": 1767612104.9538822,
+        "name": "Lakshadweep",
+        "data": {
+            "latitude": 10.875,
+            "longitude": 72.25,
+            "generationtime_ms": 0.04947185516357422,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 0.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 27.7,
+                "windspeed": 17.9,
+                "winddirection": 80,
+                "is_day": 1,
+                "weathercode": 0
+            }
+        }
+    },
+    "Puducherry": {
+        "timestamp": 1767612106.8330815,
+        "name": "Puducherry",
+        "data": {
+            "latitude": 12.0,
+            "longitude": 79.875,
+            "generationtime_ms": 0.05650520324707031,
+            "utc_offset_seconds": 0,
+            "timezone": "GMT",
+            "timezone_abbreviation": "GMT",
+            "elevation": 8.0,
+            "current_weather_units": {
+                "time": "iso8601",
+                "interval": "seconds",
+                "temperature": "\u00b0C",
+                "windspeed": "km/h",
+                "winddirection": "\u00b0",
+                "is_day": "",
+                "weathercode": "wmo code"
+            },
+            "current_weather": {
+                "time": "2026-01-05T11:15",
+                "interval": 900,
+                "temperature": 25.9,
+                "windspeed": 13.8,
+                "winddirection": 51,
+                "is_day": 1,
+                "weathercode": 2
+            }
+        }
+    }
+}

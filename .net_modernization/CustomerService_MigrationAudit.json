@@ -1,0 +1,162 @@
+{
+  "comparison": {
+    "structural": [
+      {
+        "changeType": "Namespace Change",
+        "location": "File header",
+        "legacyCode": "namespace LegacyCustomerPortal.Services",
+        "upgradedCode": "namespace ModernCustomerPortal.Services;",
+        "rationale": "Reflects migration to new project structure and naming convention."
+      },
+      {
+        "changeType": "Using Directives Change",
+        "location": "File header",
+        "legacyCode": "using System.Collections.Generic;\nusing System.Configuration;\nusing System.Data.SqlClient;\nusing LegacyCustomerPortal.Models;",
+        "upgradedCode": "using Microsoft.Data.SqlClient;\nusing ModernCustomerPortal.Models;",
+        "rationale": "System.Configuration removed, replaced with dependency-injected IConfiguration. SqlClient switched to Microsoft.Data.SqlClient for .NET Core compatibility. Models namespace updated."
+      },
+      {
+        "changeType": "Class Declaration Change",
+        "location": "Class declaration",
+        "legacyCode": "public class CustomerService",
+        "upgradedCode": "public class CustomerService : ICustomerService",
+        "rationale": "Implements ICustomerService interface for improved testability and adherence to SOLID principles."
+      },
+      {
+        "changeType": "Access Modifier Change",
+        "location": "Field declaration",
+        "legacyCode": "private string _connectionString = ConfigurationManager.ConnectionStrings[\"DefaultConnection\"].ConnectionString;",
+        "upgradedCode": "private readonly IConfiguration _configuration;",
+        "rationale": "Replaces direct configuration access with dependency injection for improved maintainability and testability."
+      }
+    ],
+    "behavioral_logic": [
+      {
+        "changeType": "Constructor Addition",
+        "location": "CustomerService class",
+        "legacyCode": "// No explicit constructor",
+        "upgradedCode": "public CustomerService(IConfiguration configuration)\n{\n    _configuration = configuration;\n}",
+        "rationale": "Introduces dependency injection for configuration, aligning with modern .NET practices."
+      },
+      {
+        "changeType": "Method Signature Change",
+        "location": "CustomerService class",
+        "legacyCode": "public List<Customer> GetCustomers()",
+        "upgradedCode": "public async Task<List<Customer>> GetCustomersAsync()",
+        "rationale": "Method renamed to GetCustomersAsync and returns Task<List<Customer>> to support asynchronous operations."
+      },
+      {
+        "changeType": "Connection String Retrieval Change",
+        "location": "GetCustomers method body",
+        "legacyCode": "private string _connectionString = ConfigurationManager.ConnectionStrings[\"DefaultConnection\"].ConnectionString;\n...\nusing (SqlConnection conn = new SqlConnection(_connectionString))",
+        "upgradedCode": "var connectionString = _configuration.GetConnectionString(\"DefaultConnection\");\n...\nawait using var conn = new SqlConnection(connectionString);",
+        "rationale": "ConfigurationManager replaced with IConfiguration for dependency injection and .NET Core compatibility."
+      },
+      {
+        "changeType": "Async/Await Adoption",
+        "location": "GetCustomersAsync method body",
+        "legacyCode": "conn.Open();\nSqlCommand cmd = new SqlCommand(\"SELECT Id, Name, Email, Age FROM Customers\", conn);\nSqlDataReader reader = cmd.ExecuteReader();\nwhile (reader.Read())",
+        "upgradedCode": "await conn.OpenAsync();\nvar cmd = new SqlCommand(\"SELECT Id, Name, Email, Age FROM Customers\", conn);\nawait using var reader = await cmd.ExecuteReaderAsync();\nwhile (await reader.ReadAsync())",
+        "rationale": "All database operations made asynchronous for improved scalability and performance."
+      },
+      {
+        "changeType": "Resource Disposal Enhancement",
+        "location": "GetCustomersAsync method body",
+        "legacyCode": "using (SqlConnection conn = new SqlConnection(_connectionString))\n{\n    ...\n}",
+        "upgradedCode": "await using var conn = new SqlConnection(connectionString);\n...\nawait using var reader = await cmd.ExecuteReaderAsync();",
+        "rationale": "Switches from synchronous using to await using for proper async resource disposal."
+      },
+      {
+        "changeType": "Customer Object Construction Change",
+        "location": "GetCustomers/GetCustomersAsync method body",
+        "legacyCode": "customers.Add(new Customer\n{\n    Id = (int)reader[\"Id\"],\n    Name = reader[\"Name\"].ToString(),\n    Email = reader[\"Email\"].ToString(),\n    Age = (int)reader[\"Age\"]\n});",
+        "upgradedCode": "customers.Add(new Customer\n{\n    Id = reader.GetInt32(0),\n    Name = reader.GetString(1),\n    Email = reader.GetString(2),\n    Age = reader.GetInt32(3)\n});",
+        "rationale": "Uses strongly-typed SqlDataReader methods for improved performance and type safety."
+      }
+    ],
+    "framework_runtime_dependency": [
+      {
+        "changeType": ".NET Framework to .NET Core Migration",
+        "location": "Project-wide",
+        "legacyCode": "using System.Configuration;\nusing System.Data.SqlClient;",
+        "upgradedCode": "using Microsoft.Data.SqlClient;\nusing Microsoft.Extensions.Configuration;",
+        "rationale": "Migrates from .NET Framework APIs to .NET Core/modern APIs."
+      },
+      {
+        "changeType": "API Replacement",
+        "location": "Configuration access",
+        "legacyCode": "ConfigurationManager.ConnectionStrings[\"DefaultConnection\"].ConnectionString",
+        "upgradedCode": "_configuration.GetConnectionString(\"DefaultConnection\")",
+        "rationale": "Replaces legacy configuration API with dependency-injected configuration."
+      }
+    ],
+    "security_enhancements": [
+      {
+        "changeType": "Configuration Security Improvement",
+        "location": "Connection string access",
+        "legacyCode": "ConfigurationManager.ConnectionStrings[\"DefaultConnection\"].ConnectionString",
+        "upgradedCode": "_configuration.GetConnectionString(\"DefaultConnection\")",
+        "rationale": "Dependency injection reduces risk of configuration exposure and supports secure configuration providers."
+      }
+    ],
+    "performance_scalability": [
+      {
+        "changeType": "Async I/O Adoption",
+        "location": "Database operations",
+        "legacyCode": "conn.Open();\nSqlDataReader reader = cmd.ExecuteReader();\nwhile (reader.Read())",
+        "upgradedCode": "await conn.OpenAsync();\nawait using var reader = await cmd.ExecuteReaderAsync();\nwhile (await reader.ReadAsync())",
+        "rationale": "Async operations improve scalability and responsiveness under load."
+      },
+      {
+        "changeType": "Resource Disposal Optimization",
+        "location": "Database connection and reader",
+        "legacyCode": "using (SqlConnection conn = ...)\n...\n// No explicit disposal for SqlDataReader",
+        "upgradedCode": "await using var conn = ...;\nawait using var reader = ...;",
+        "rationale": "Ensures proper async disposal of resources, reducing risk of leaks."
+      }
+    ],
+    "code_quality_maintainability": [
+      {
+        "changeType": "Interface Implementation",
+        "location": "Class declaration",
+        "legacyCode": "public class CustomerService",
+        "upgradedCode": "public class CustomerService : ICustomerService",
+        "rationale": "Improves testability and supports dependency inversion."
+      },
+      {
+        "changeType": "Method Renaming for Clarity",
+        "location": "Method signature",
+        "legacyCode": "GetCustomers",
+        "upgradedCode": "GetCustomersAsync",
+        "rationale": "Follows .NET async naming conventions for clarity."
+      }
+    ],
+    "removed_obsolete": [
+      {
+        "changeType": "Obsolete API Removal",
+        "location": "Using directives",
+        "legacyCode": "using System.Configuration;",
+        "upgradedCode": "// Removed",
+        "rationale": "System.Configuration not supported in .NET Core/modern .NET."
+      },
+      {
+        "changeType": "Obsolete Field Removal",
+        "location": "Class field",
+        "legacyCode": "private string _connectionString = ConfigurationManager.ConnectionStrings[\"DefaultConnection\"].ConnectionString;",
+        "upgradedCode": "// Removed",
+        "rationale": "Replaced with dependency-injected IConfiguration."
+      }
+    ]
+  },
+  "summary_statistics": {
+    "total_changes": 16,
+    "additions": 4,
+    "deletions": 4,
+    "modifications": 8,
+    "refactors": 4,
+    "enhancements": 6,
+    "total_lines_added": 13,
+    "total_lines_removed": 8,
+    "total_lines_modified": 11
+  }
+}

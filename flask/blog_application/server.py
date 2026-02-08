@@ -1,3 +1,4 @@
+from os import abort
 import requests
 from flask import Flask, render_template
 
@@ -10,10 +11,11 @@ def get_posts():
     response.raise_for_status()
     return response.json()
 
+@app.route("/")
 @app.route("/home")
 def get_all_posts():
     posts = get_posts()
-    return render_template("index.html", posts=posts)
+    return render_template("index.html", all_posts=posts)
 
 @app.route("/about")
 def about():
@@ -27,6 +29,11 @@ def contact():
 def show_post(index):
     posts = get_posts()
     requested_post = next((p for p in posts if p["id"] == index), None)
+    
+    # Return 404 if post not found
+    if requested_post is None:
+        abort(404)
+    
     return render_template("post.html", post=requested_post)
 
 if __name__ == "__main__":
